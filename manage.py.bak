@@ -1,0 +1,3 @@
+#!/usr/bin/env python
+print('This package contains code skeletons. To create a runnable Django project, run:\n')
+print('django-admin startproject backend .\npython manage.py migrate\npython manage.py runserver') 

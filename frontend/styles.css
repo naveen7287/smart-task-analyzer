@@ -1,0 +1,5 @@
+body{font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;}
+.card-task{border-left:6px solid;}
+.priority-high{border-left-color:#dc3545;}
+.priority-med{border-left-color:#ffc107;}
+.priority-low{border-left-color:#198754;}

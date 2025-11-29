@@ -1,0 +1,43 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Smart Task Analyzer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-light">
+{% verbatim %}
+  <div class="container py-4">
+    <h1 class="mb-4">Smart Task Analyzer</h1>
+    <div class="row">
+      <div class="col-md-5">
+        <div class="card p-3 mb-3">
+          <h5>Input Tasks (JSON)</h5>
+          <textarea id="taskInput" class="form-control" rows="12" placeholder='[{"title":"Example","due_date":"2025-12-01","importance":8,"estimated_hours":2}]'></textarea>
+          <div class="mt-2 d-flex gap-2">
+            <select id="strategy" class="form-select">
+              <option value="balanced">Balanced</option>
+              <option value="deadline">Deadline Driven</option>
+              <option value="quickwins">Quick Wins</option>
+            </select>
+            <button class="btn btn-primary" onclick="analyzeTasks()">Analyze</button>
+            <button class="btn btn-outline-secondary" onclick="suggestTasks()">Suggest</button>
+          </div>
+        </div>
+        <div class="card p-3">
+          <h6>Example Input</h6>
+          <pre>[{"title":"Finish report","due_date":"2025-12-01","importance":8,"estimated_hours":3},{"title":"Fix bug #42","due_date":"2025-11-30","importance":9,"estimated_hours":1},{"title":"Long project","importance":6,"estimated_hours":40}]</pre>
+        </div>
+      </div>
+      <div class="col-md-7">
+        <div id="results" class="row gy-3"></div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+{% endverbatim %}
+</body>
+</html>
